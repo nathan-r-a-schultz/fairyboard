@@ -1,15 +1,18 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    // init a new json object
     $leaderboardObj = new stdClass();
     $leaderboardObj->leaderboardName = $_POST['newLb'];
     $leaderboardObj->entries = [];
 
+    // open the submissions file and write to it
     $file = fopen("submissions.json", "a");
     fwrite($file, json_encode($leaderboardObj) . PHP_EOL);
     fclose($file);
 
+    // below is the html for the submission confirmation page
     ?>
-
     <!DOCTYPE html>
     <html lang="en"
         <head>
