@@ -9,13 +9,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!DOCTYPE html>
     <html lang="en"
         <head>
-            <meta http-equiv="refresh" content="3;url=index.html">
-            <title>Success</title>
+            <meta http-equiv="refresh" content="3;url=index.php">
+            <title>Data cleared</title>
         </head>
         <body>
             <p>The database file has been cleared. If this was an accident, I hope you have a backup ¯\_(ツ)_/¯</p>
             <p>You will be redirected in 3 seconds.</p>
-            <p><a href="index.html">Click here if you are not redirected.</a></p>
+            <p><a href="index.php">Click here if you are not redirected.</a></p>
         </body>
     </html>
     <?php
