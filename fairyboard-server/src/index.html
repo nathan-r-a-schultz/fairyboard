@@ -13,19 +13,30 @@
         For the time, note that it's a string. So, you can input the time in any format you like. Just remember to keep it consistent.
     </p>
     <hr>
-    <form action="/submit.php" method="post">
+    <form action="/create_leaderboard.php" method="post">
+      <label for="fname">Create new leaderboard:</label>
+      <input type="text" id="newLb" name="newLb"></label>
+      <input type="submit" value="Submit">
+    </form>
+    <hr>
+    <form action="/add_entry.php" method="post">
+        <!-- 
+        legacy code:
         <label for="fname">Leaderboard ID:</label>
         <input type="text" id="lbID" name="lbID"><br><br>
         <label for="fname">YT Video Link</label>
         <input type="text" id="ytLink" name="ytLink"><br><br>
         <label for="fname">Time:</label>
         <input type="text" id="time" name="time"><br><br>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit"> 
+
+        todo: have a dropdown with all the leaderboard names and append the entry to the selected leaderboard
+        -->
     </form>
     <hr>
-    <p>Reset the CSV file:</p>
-    <form action="clear_csv.php" method="post" onsubmit="return confirm('Are you sure you want to clear all submissions?');">
-        <input type="submit" value="Reset CSV file">
+    <p>Reset the database file:</p>
+    <form action="clear_database.php" method="post" onsubmit="return confirm('Are you sure you want to clear all submissions?');">
+        <input type="submit" value="Reset database file">
     </form>
     <hr>
   </body>
